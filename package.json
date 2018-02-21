@@ -1,0 +1,25 @@
+{
+  "name": "http-runner",
+  "version": "1.0.0",
+  "description": "Http request runner",
+  "scripts": {
+    "start": "node ./runner.js",
+    "test": ""
+  },
+  "keywords": [
+    "runner",
+    "http"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "author": "Sergey Pahmurny",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "async": "^2.6.0",
+    "newman": "^3.9.3",
+    "path": "^0.12.7"
+  }
+}
