@@ -29,7 +29,7 @@ async.parallel(runArray,
   });
   */
 const times = process.argv[2] ? +process.argv[2] : 1;
-const url = 'http://127.0.0.1:8000/api/v1/orders/createguest';
+const url = 'https://touchcr-api-dev.herokuapp.com/api/v1/orders/createguest';
 const productPrice = 106;
 let bodyCreateOrder = {
   products: [
@@ -72,6 +72,7 @@ for (let i = 0; i < times; i++){
   let newBody = JSON.parse(JSON.stringify(bodyCreateOrder));
   newBody.products[0].count = i+1;
   newBody.orderTotal = (i+1) * productPrice;
+  newBody.accDetails.email = `stresstesterapi${i}@gmail.com`;
   const parallelCollectionRun = (done) => {
     // console.log('url', url);
     // console.log('body', newBody);
